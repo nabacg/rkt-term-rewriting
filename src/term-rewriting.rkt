@@ -181,11 +181,8 @@
 ;(algebra '(+ (* 0 x) (* 1 y)))
 ; (algebra '(* 12 ))
 
-;(algebra '(*  (a thing (with something else)) (+ 2 3)))
-; =>
-; '(+ (* (a thing (with something else)) 2) (* (a thing (with something else)) 3))
-
-
+; (algebra '(*   (big red circle) (+ 2 3)))
+;'(+ (* (big red circle) 2) (* (big red circle) 3))
 ;((algebra '(* (big red circle) (+ 2 3)) )
 ;'(+ (* (big red circle) 2) (* (big red circle) 3))
 ;(algebra '(* (big red circle) (big red circle)))
@@ -194,7 +191,7 @@
 ;(algebra '(/ (* (big red circle) (big red circle)) (big red circle)))
 ; '(big red circle)
 
-; ./ 
+; apply expr in defined bingings ./ 
 (define (apply-expr expr bindings)
   (eval
    `(let ,bindings
